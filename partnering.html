@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>partnering</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+</head>
+<style>
+    
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+   
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+#first h1, #first h2 {
+    font-size: 2.5rem; 
+}
+
+#first p {
+    font-size: 1.2rem; 
+}
+
+.btn {
+    background-color: #b47a2e; 
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: white; 
+    color: #b47a2e; 
+}
+   .card {
+    background-color: rgba(255, 255, 255, 0.8) !important; 
+    border: 1px solid #b47a2e !important;
+    border-radius: 5px; 
+}
+p{
+    
+    font-size: 14px; 
+    font-family: 'Open Sans', sans-serif;
+    line-height: 26px;
+    margin: 0;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+}
+
+.modal.show {
+    display: block; 
+    opacity: 1; 
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #b47a2e; 
+    width: 50%; 
+    max-width: 500px; 
+    transform: translateY(-30px); /* Start slightly above */
+    transition: transform 0.5s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0); /* Move to its original position */
+}
+
+.close {
+    color: #aaa; 
+    float: right; 
+    font-size: 28px; 
+    font-weight: bold; 
+}
+
+.close:hover,
+.close:focus {
+    color: black; 
+    text-decoration: none; 
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    #first h1, #first h2 {
+        padding-left: 5%;
+    font-size: 1.5rem; 
+}
+#openModal{
+    margin-left: 5%;
+}
+#first p {
+    padding-left: 5%;
+    font-size: 1rem;
+}
+
+ 
+ .modal-content {
+        width: 80%; 
+    }
+}
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #2a2728; ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Brand" >
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+            <span class="navbar-toggler-icon" style="
+              background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3E%3Cpath stroke=%27%23ffffff%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3E%3C/svg%3E');">
+            </span>
+          </button>
+            <!-- <a class="navbar-brand" href="#">Brand</a> -->
+            <div class="collapse navbar-collapse justify-content-center"  id="navbarNav">
+           
+                <a>
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link text-white" href="ourstory.html">our story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ourmenu.html">OUR MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ourstores.html">OUR STORES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="partnering.html">PARTNERING WITH US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="first" style="position: relative;">
+        <img src="https://uniquekiosk.com/wp-content/uploads/2020/04/5-1-1.jpg" alt="Cafe Image" style="width: 100%; height: auto;"/>
+        <div class="overlay" style="position: absolute; top: 10%; left: 0; right: 0; bottom: 0; display: flex; background-color: rgba(0, 0, 0, 0.5);">
+            <div class="container text-white">
+                <div class="row">
+                    <div class="col-md-6" style="padding: 10px;">
+                        <h2>Own a coffee house & be your own boss!</h2>
+                        <p>Channel your passion for people, business, and great coffee into a thriving franchise model with Brownie Brews!</p>
+                      
+                      <br>
+                        <button id="openModal" class="btn">Own your franchise</button>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popup Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h5>CHANGE YOUR LIFE TODAY</h5>
+            <p>Talk To a Brownie Brews Franchise Specialist</p>
+            <form>
+                <div class="mb-3">
+                    <input style="background-color: #f6f4ef;border: none;" type="text" class="form-control" placeholder="First Name" required>
+                </div>
+                <div class="mb-3">
+                    <input style="background-color: #f6f4ef;border: none;" type="text" class="form-control" placeholder="Last Name" required>
+                </div>
+                <div class="mb-3">
+                    <input style="background-color: #f6f4ef;border: none;" type="tel" class="form-control" placeholder="Phone" required>
+                </div>
+                <div class="mb-3">
+                    <input style="background-color: #f6f4ef;border: none;" type="email" class="form-control" placeholder="Email" required>
+                </div>
+                <button type="submit" style="border-radius: 25px;font-weight: bold;" class="btn mt-3">SEND</button>
+            </form>
+        </div>
+    </div>
+    
+    
+    
+    
+    <section class="containerr p-5" style=" background-color: white; ">
+        <div class="row ">
+            <div class="col-md-6 mb-2">
+                <div class="card text-center border-0 border-color: brown;">
+                    <div class="card-body">
+                        <i class="fas fa-user-graduate fa-3x mb-3 " style="color: #b47a2e;"></i>
+                        <h5 class="card-title">TRAINING AND SUPPORT</h5>
+                        <p class="card-text">People from all walks of life can become successful Brownie Brews Coffees franchise partners. No prior coffee knowledge is required, although you need a passion for all things coffee! We will arm you with the tools you need to set up and run your coffee house.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="card text-center border-0">
+                    <div class="card-body">
+                        <i class="fas fa-hands-helping fa-3x mb-3"style="color: #b47a2e;"></i>
+                        <h5 class="card-title">ONGOING SUPPORT AND TRAINING</h5>
+                        <p class="card-text">When you join our franchise network, we are committed to supporting your success, offering assistance in areas such as store management and staff training. Being part of a franchised system also means you have access to tried and tested operating systems, designed to help your coffee house grow from strength to strength.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="card text-center border-0">
+                    <div class="card-body">
+                        <i class="fas fa-bullhorn fa-3x mb-3"style="color: #b47a2e;"></i>
+                        <h5 class="card-title">MARKETING</h5>
+                        <p class="card-text">Brand identity has always been central to the success of Brownie Brew's Coffees. Our global marketing dep-artment has years of experience in creating and implementing successful marketing campaigns to help drive guests into our coffee houses. In Pakistan, Brownie Brew's Coffees offers franchise partners ongoing advice on local-area marketing strategies and provides access to up-to-date brand assets. We also invest in targeted campaigns aimed at boosting consumer engagement through social and print media and through radio advertising.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-2">
+                <div class="card text-center border-0">
+                    <div class="card-body">
+                        <i class="fas fa-money-check-alt fa-3x mb-3"style="color: #b47a2e;"></i>
+                        <h5 class="card-title">REQUIRED INVESTMENT & APPLICATION PROCEDURE</h5>
+                        <p class="card-text">The investment required to start up a Brownie Brew's Coffee franchise in Pakistan is around Rs. 30 million. This includes a non-refundable store opening fee, equipment, build up, materials and other set up costs. Once established, ongoing royalties are charged at 8.5% of sales.
+
+                            We encourage prospective franchise partners to contact us for a preliminary discussion. After this, should they wish to proceed further, they will be asked to submit a formal proposal in writing, along with other relevant documentation, such as their personal and financial history, site address and photos, and a complete business and feasibility plan. The application review process takes up to 6 weeks. Establishing a new Brownie Brew's Coffees franchise in Pakistan typically takes 6 months, from the date an application is submitted.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: white;text-align: center;padding-bottom: 5%;">
+        <p style="font-weight: bold;">For further inquires, please contact Brownie Brew's Coffees Pakistan at <span style="color: #b47a2e;">info@browniebrewscafe.com.pk </span> or at +92 42 3571 3172.</p>
+    </section>
+    <section class="p-5" style="background-color: #b47a2e;">
+
+    </section>
+    <footer id="footer">
+        <div class="footer-overlay"></div>
+        <div class="footer-content con1" >
+          <div class="footer-column">
+            <h3>Brownie Brews Cafe</h3>
+            <div class="social-icons">
+              <i class="fab fa-instagram instagram-icon"></i>
+            
+              <div class="facebook-icon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            
+      
+         
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul style="font-size: 14px;  ">
+              <li><a href="#" >Terms And Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Our Stores</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3  >Get Instant Access</h3>
+            <div class="barcode-container">
+              <div class="playstore">
+                <img src="https://developers.google.com/static/ml-kit/vision/barcode-scanning/images/qrcode.png" alt="Barcode 1" class="barcode">
+                <a class="playwithfirst" href="https://play.google.com/store" target="_blank">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="playstore store">
+                </a>
+              </div>
+              <div class="appstore">
+                <img src="https://developers.google.com/static/ml-kit/vision/barcode-scanning/images/qrcode.png" alt="Barcode 2" class="barcode">
+                <a href="https://www.apple.com/app-store/" target="_blank">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on-the_App_Store_Badge.svg.png" alt="Download on the App Store" class="appstore store">
+                </a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+       
+        <div class="footer-bottom">
+          <p>© 2024 All rights reserved – Powered by Tregix</p>
+        </div>
+      </footer>
+      <button id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+      
+      <script>
+    
+       let backToTopButton = document.getElementById("backToTop");
+ 
+      
+       window.onscroll = function() {scrollFunction()};
+ 
+       function scrollFunction() {
+         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+           backToTopButton.style.display = "block";
+         } else {
+           backToTopButton.style.display = "none";
+         }
+       }
+ 
+       
+       backToTopButton.addEventListener("click", function() {
+         document.body.scrollTop = 0; 
+         document.documentElement.scrollTop = 0; 
+       });
+     </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+      
+      </script>
+   <script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("openModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementById("closeModal");
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block"; // Make modal visible
+    setTimeout(() => {
+        modal.classList.add("show"); // Add the show class after a brief delay
+    }, 10); // Small timeout to allow for display change
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.classList.remove("show"); // Remove the show class for fade out
+    setTimeout(() => { 
+        modal.style.display = "none"; // Hide after transition
+    }, 500); // Match this duration with the CSS transition duration
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.classList.remove("show"); // Remove the show class for fade out
+        setTimeout(() => { 
+            modal.style.display = "none"; // Hide after transition
+        }, 500); // Match this duration with the CSS transition duration
+    }
+}
+
+   </script>
+</body>
+</html>

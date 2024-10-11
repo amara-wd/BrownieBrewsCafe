@@ -1,0 +1,591 @@
+html {
+  scroll-behavior: smooth;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+ background-color: #2a2728;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.navbar-brand img{
+  padding-left: 2px;
+}
+.navbar-toggler {
+  border-color: #b47a2e;
+}
+.nav-item {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #30271c;
+  font-family: Oswald, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-right: 1.5rem;
+}
+.navbar-nav .nav-link:hover {
+  color: #b47a2e !important;
+}
+
+/* Set a fixed height and width for the carousel */
+#carouselExampleControls {
+  width: 100%; /* You can set a specific width if needed */
+  height: 600px; /* Set a fixed height */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.carousel-item {
+  height: 100%; /* Full height for carousel items */
+  width: 100%; /* Full width for carousel items */
+}
+
+.carousel-item img {
+  width: 100%; /* Make images fill the width */
+  height: 100%; /* Make images fill the height */
+  object-fit: cover; /* Cover the area without distortion */
+}
+.carousel-item {
+  transition: opacity 1s ease-in-out; /* Make the opacity transition smoother */
+  opacity: 0; 
+}
+
+.carousel-item.active {
+  opacity: 1; /* Active item fully visible */
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  opacity: 0; 
+}
+
+
+.carousel-item-next.active,
+.carousel-item-prev.active {
+  opacity: 1; 
+}
+.carousel-indicators button {
+  background-color: #e09539; 
+  border-radius: 50%; 
+  width: 7px; 
+  height: 10px; 
+  border: none; 
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+  margin: 0 8px; /* Space between indicators */
+}
+.carousel-indicators {
+  margin-bottom: 2%; /* Distance from the carousel */
+}
+.carousel-indicators .active {
+  background-color: #ffffff; 
+  opacity: 1; 
+}
+
+.favorite-flavors-section {
+  position: relative;
+  height: auto;
+  background-image: url("https://images.pexels.com/photos/131056/pexels-photo-131056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.content h2 {
+  text-align: center;
+}
+.content h2 {
+  opacity: 0; /* Initially hide the heading */
+  transform: translateY(-20px); 
+  transition: opacity 2s ease-out, transform 2s ease-out; 
+}
+
+.content h2.reveal {
+  opacity: 1; 
+  transform: translateY(0); /* Reset position */
+}
+
+/* Menu item animation as already defined */
+.menu-item {
+  opacity: 0; /* Initially hide the menu items */
+  transform: translateY(20px); /* Slide up effect */
+  transition: opacity 3s ease-out, transform 3s ease-out; /* Smooth transition */
+}
+
+.menu-item.reveal {
+  opacity: 1; /* Reveal the menu items */
+  transform: translateY(0); /* Reset position */
+}
+
+.flavor-hr {
+  border: none;
+  height: 2px;
+  background-color: #e09539;
+  margin: 10px auto;
+  width: 25%;
+}
+
+.menu-hr {
+  border: none;
+  height: 1px;
+  background-color: white;
+  margin: 10px 0;
+  width: 80%;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+  padding-left: 12%;
+}
+
+.menu-column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.menu-item {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.menu-item p {
+  font-size: 16px;
+}
+
+
+.menu-item {
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: opacity 3s ease-out, transform 3s ease-out; /* Smooth transition */
+}
+
+.menu-item.reveal {
+  opacity: 1; /* Reveal the menu items */
+  transform: translateY(0); /* Reset position */
+}
+
+#extra {
+  background-color: #2a2728;
+  color: white;
+  padding: 20px; /* Adjust the padding as needed */
+  padding-right: 20px;
+}
+.logo {
+  display: block; /* Makes the image a block element */
+  margin: 0 auto 20px; /* Center the logo and add space below it */
+  max-width: 50%; /* Ensure the logo is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+.container-extra {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between items */
+}
+
+.text-container {
+  flex: 1; /* Take available space */
+  padding-right: 20px; /* Add some space between text and image */
+  padding-left: 20px;
+  text-align: center;
+  align-items: center;
+}
+.text-container {
+  width: 50%;
+}
+.image-container {
+  flex: 0 0 40%; /* Set a fixed width for the image container */
+}
+
+.image-container img {
+  width: 100%; /* Make the image responsive */
+  border-radius: 8px; /* Optional: Add rounded corners to the image */
+}
+
+
+p {
+  font-family: "Dancing Script", cursive; /* Use a handwritten font */
+}
+#quote {
+ 
+  transition: opacity 1s ease-in-out; /* Make the opacity transition smoother */
+  opacity: 1;
+}
+.hidden {
+  opacity: 0; /* Hidden state */
+}
+#footer {
+  position: relative;
+  background-image: url("https://coffeebros.com/cdn/shop/articles/best-coffee-shops-in-NYC-2024.jpg?v=1712595958");
+  background-size: cover; /* Cover the entire footer area */
+  color: white;
+  font-family: Oswald, sans-serif;
+  padding-left: 60px;
+  padding-top: 60px;
+}
+
+.footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  z-index: 1; /* Place overlay above the background */
+}
+
+.footer-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2; /* Place content above the overlay */
+}
+
+.footer-column {
+  flex: 1; /* Equal space for each column */
+  margin: 0 4px; /* Add spacing between columns */
+}
+.social-icons {
+  display: flex; /* Align items in a row */
+  gap: 10px; /* Space between the icons */
+  align-items: center; /* Vertically center the icons */
+}
+.instagram-icon {
+  font-size: 40px; /* Adjust the size as needed */
+  background: linear-gradient(
+    45deg,
+    rgb(131, 58, 180),
+    rgb(253, 29, 29),
+    rgb(245, 96, 64),
+    rgb(252, 175, 69)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 2%;
+}
+.facebook-icon {
+  background-color: #1877f2; /* Facebook blue */
+  width: 40px; /* Set equal width and height */
+  height: 40px;
+  display: inline-flex; /* Center the icon */
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Makes the background circular */
+}
+
+.facebook-icon i {
+  color: white; /* White 'f' */
+  font-size: 20px; /* Adjust size of 'f' */
+  line-height: 1; /* Ensure the 'f' does not get too much vertical space */
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.footer-column ul {
+  list-style: none;
+  padding: 0; /* Remove default padding */
+}
+
+.footer-column li {
+  margin: 5px 0; /* Space between links */
+}
+
+.footer-column li a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+.footer-column li a:hover {
+  color: #b47a2e; /* Change link color to brown on hover */
+}
+.footer-bottom {
+  z-index: 2;
+  display: flex;
+  margin-top: 20px; /* Space above footer bottom */
+  border-top: 1px solid #e09539; /* Optional: Top border line */
+  padding-top: 10px; /* Space above footer bottom text */
+  padding-left: 5%;
+  padding-top: 20px;
+}
+
+.barcode-container {
+  display: flex; /* Keep barcodes and buttons in a row */
+  justify-content: space-between; /* Space out the items */
+  align-items: center; /* Center align items vertically */
+}
+.playstore,
+.appstore {
+  width: 60%; /* Ensure both are the same width */
+  text-align: center; /* Center align text and images */
+  margin-right: 5px; 
+}
+
+.barcode {
+  width: 60%; /* Make barcodes full width of their container */
+  margin-bottom: 5px; /* Space between barcode and download button */
+}
+
+
+/* home page */
+h1{
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color:#b47a2e; font-size: 3rem; font-family: 'Oswald', sans-serif;font-weight: bold;
+}
+
+
+
+
+
+
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  color: #b47a2e;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#backToTop:hover {
+  background-color: #555;
+}
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  
+  #carouselExampleControls {
+    height: 400px; /* Adjust the height for mobile view */
+  }
+  
+  .carousel-item img {
+    height: auto; /* Make image height flexible on mobile */
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 30px; /* Reduce the width of the control buttons */
+    height: 30px; /* Reduce the height for mobile */
+    top: 50%; /* Vertically center the controls */
+    transform: translateY(-50%); /* Ensure proper vertical centering */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 15px 15px; /* Resize the icons */
+  }
+  
+  .carousel-indicators {
+    bottom: 10px; /* Bring indicators closer to the image */
+    margin-bottom: 0; /* Reset margin for mobile */
+  }
+  
+  .carousel-indicators button {
+    width: 5px; /* Smaller indicator circles */
+    height: 5px; /* Smaller indicator height */
+    margin: 0 5px; /* Less spacing between indicators */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 576px) {
+  #carouselExampleControls {
+    height: 300px; /* Further reduce height for very small screens */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 25px; /* Further reduce size */
+    height: 25px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 12px 12px; /* Even smaller icons */
+  }
+
+  .carousel-indicators {
+    bottom: 10px; /* Bring indicators even closer */
+  }
+
+  .carousel-indicators button {
+    width: 3px;
+    height: 4px;
+    margin: 0 3px; /* Smaller margin for tighter spacing */
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+
+  .menu-container {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+    align-items: center; /* Center-align the menu items */
+    padding-left: 0%;
+  }
+.menu-hr {
+  border: none; /* Remove default border */
+  height: 1px; /* Set height of the line */
+  background-color: white; /* Set the color */
+  margin: 10px auto; /* Spacing above and below the line */
+  width: 60%;
+  text-align: center; 
+}
+  .menu-column {
+    width: 100%; /* Ensure full width on smaller screens */
+    margin: 0px 0; /* Add some spacing between columns */
+  }
+
+  .menu-item {
+    text-align: center; /* Center-align text on smaller screens */
+  }
+  .content h3 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+}
+
+@media (max-width: 992px) {
+  .content h3 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .menu-item {
+    font-size: 16px; /* Slightly reduce font size for smaller screens */
+  }
+
+  .menu-item p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+
+  
+  .container-extra {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-container {
+    padding-right: 10px; /* Add some space between text and image */
+    padding-left: 10px;
+    text-align: center;
+  }
+  .text-container {
+    width: 80%;
+  }
+  .image-container {
+    display: flex; /* Use flex to center the image */
+    justify-content: center; /* Center the image horizontally */
+    width: 100%; /* Ensure it takes the full width */
+    margin-top: 10px; /* Add space between text and image */
+  }
+  .image-container img {
+    width: 80%;
+  }
+  #footer {
+
+    padding-left: 0px;
+  }
+  .footer-content {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center; /* Center align columns */
+    padding: 0 10%; /* Add padding on smaller screens */
+  }
+  .footer-column {
+    margin: 10px 0; /* Margin for vertical spacing */
+    text-align: center; /* Center text in columns */
+  }
+
+  .footer-column h3 {
+    font-size: 18px; /* Adjust heading size */
+  }
+
+  .footer-column li {
+    margin: 8px 0; /* Space between links */
+  }
+
+  .social-icons {
+    justify-content: center; /* Ensure social icons are centered */
+  }
+  .barcode-container {
+    flex-direction: column; /* Stack barcodes and buttons vertically on mobile */
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text in the barcode container */
+    width: 100%; /* Ensure it takes full width of the footer column */
+  }
+
+  .playstore,
+  .appstore {
+    width: 100%; /* Ensure both sections take full width */
+    display: flex;
+    flex-direction: column; /* Stack barcode above download button */
+    align-items: center; /* Center align items */
+    margin: 10px 0; /* Space between barcode and button */
+  }
+
+  .barcode {
+    width: 60%; /* Set a specific width for barcodes */
+    margin-bottom: 5px; /* Space between barcode and download button */
+  }
+
+  .playstore img,
+  .appstore img {
+    width: 70%; /* Set a consistent width for download buttons */
+    max-width: 150px; /* Limit the max width */
+    margin-top: 5px; /* Add space above the button */
+  }
+  .store {
+    padding-left: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+  margin-left: 0; /* Reset margin for mobile view */
+  margin-right: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.2; /* Adjust line height */
+}
+.navbar-brand img{
+  padding-left: 0px;
+  width: 60%;
+}}
+
+@media (min-width: 992px) and (max-width: 1250px) {
+  .nav-item {
+    font-size: 10px; /* Decrease the font size */
+    padding-right: .5rem; /* Adjust padding if needed */
+  }
+}
+@media (max-width: 768px) {
+h1{
+  font-size: 1rem; }
+}
