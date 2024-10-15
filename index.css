@@ -566,18 +566,7 @@ h1{
   }
 }
 
-@media (max-width: 768px) {
-  .navbar-brand {
-  margin-left: 0; /* Reset margin for mobile view */
-  margin-right: 0;
-  padding: 0;
-  font-size: 1rem;
-  line-height: 1.2; /* Adjust line height */
-}
-.navbar-brand img{
-  padding-left: 0px;
-  width: 60%;
-}}
+
 
 @media (min-width: 992px) and (max-width: 1250px) {
   .nav-item {
@@ -585,7 +574,30 @@ h1{
     padding-right: .5rem; /* Adjust padding if needed */
   }
 }
+.navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align logo to the left and toggle button to the right */
+}
 @media (max-width: 768px) {
-h1{
-  font-size: 1rem; }
+  .navbar-brand {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .navbar-brand img {
+    padding-left: 0;
+    max-width: 60%; /* Ensures the image doesn't get too large */
+  }
+  
+  .navbar-toggler {
+    margin-left: auto; /* Ensures toggle button stays to the right */
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
 }
